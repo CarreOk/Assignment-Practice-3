@@ -1,85 +1,150 @@
-<html>
-<head>
-    <title>Test</title>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title> Tic Tac Toe</title>
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-    console.log("Hello, World!");
-    </script>
-    <link rel="stylesheet" href="practice003.css">
-</head>
-<body>
-    <script>
-        function timesTable(number) {document.write("<h3> Times Table for " + number + "</h3>");
-        for (let i = 1; i <= 12; i++)   {
-            document.write(number + " x " + i + " = " + number * i + "<br>");}
-            //this funtion will print the times table for the number that is passed in as an argument. It will print the times table from 1 to 12.
 
-  let user = prompt("Try out some mathing!!!");
-  if (user != null) {
-            timesTable(user);
-    document.write("<p>Hope you had fun. " + user + "! Whats Next?</p>");
-            document.write("<hr>");}
+    <style type="text/css">
+        body {
+background: linear-gradient(0deg,rgba(2, 0, 36, 0.76) 0%, rgba(116, 116, 181, 0.78) 35%, rgba(163, 233, 247, 0.88) 100%); .container{
+  grid-template-columns: auto auto auto;
+  border-radius: 5px;
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 500px none #1db4fad4;
+  border-collapse: collapse;
 } 
-//this code will prompt the user to enter a number and then it will call the timesTable function with the user's input as an argument. It will also print a message to the user after they have entered their input.
+.container_001 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.button {
+  background-color: #22282cb4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+position:relative ;
+}
 
+.box:hover {
+ background: linear-gradient(180deg,rgba(210, 123, 247, 0.35) 10%, rgba(252, 192, 71, 0.35) 50%);
+}
 
+.box h3 {
+  font-size: 24px;
+  color: #3545C5;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
 
+.box {
+  border: 1px solid #fafafad4;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 20%;
+  text-align: center;
+  display: inline-block;
+  min-height: 250px;
+  vertical-align: top;
+  margin: 15px;
+  padding: 10px;
+  font-size: 30px;
+}
 
-        // Function to convert Fahrenheit to Celsius
-  function fahr2cels(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
-}//this function will take a value in Fahrenheit and convert it to Celsius. It will also update the innerHTML of an element with the id "outputCelcius" to display the result.
- let far = 32;
- let cel = (far - 32) / 1.8;
- let kelv = cel + 273.15;
- //this code will convert 32°F to Celsius and Kelvin. It will then print the results to the console and also write them to the document.
+h1 {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  color: rgba(0, 11, 46, 0.793);
+  text-align: center;
 
-console.log(far + "°F is " + cel + "°C and " + kelv + "K");
-document.write("<h3>Farenheit to Celcius Conversions</h3>");
-document.write("<p>" + far + "°F is " + cel + "°C and " + kelv + "K</p>");
-document.write(far + "°F is " + fahr2cels(far) + "°C<br>");
-document.write(cel + "°C is " + (cel * 1.8 + 32) + "°F<br>");
-document.write(kelv + "K is " + (kelv - 273.15) + "°C<br>");
-   //this code will print the results of the Fahrenheit to Celsius conversion to the console and also write them to the document. It will also convert 32°F to Celsius and write the result to the document. It will also convert the Celsius value back to Fahrenheit and write the result to the document. Finally, it will convert the Kelvin value back to Celsius and write the result to the document.    
-</script>
-    <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Problem 1: <br> Times Table</h1>     
-<div style=" text-align: center;">
-    <p>Times Table for null </p>
-   
-null x 1= 0
-<br>
-null x 2= 0
-<br>
-null x 3= 0
-<br>
-null x 4= 0
-<br>
-null x 5= 0
-<br>                
-null x 6= 0
-<br>    
-null x 7= 0
-<br>
-null x 8= 0
-<br>
-null x 9= 0
-<br>
-null x 10= 0
-<br>
-null x 11= 0
-<br>
-null x 12= 0
-<br> 
-    
-<p><button onclick="timesTable()">try mathing</button></p>
-<hr style="border: 5px;border-color: cadetblue;">
-<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Problem 2: <br> Farenheit to Celcius Conversions</h1>     
-<div style=" text-align: center;">
-    <p>32°F is 0°C and 273.15K
+} 
+ </style>
+</head>
+<body>  
+<p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+     This is The
 </p>
+<h1 style="text-align: center; font: 3.6em courier;">Tic Tac Toe Game</h1>
+<div class="container">
+<div id="card001" class="box">
+<h5>1</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+</div>
 
+<div id="card002" class="box" >
+      <h5>2</h5>
+<p style="font-size:3em; font-family: 'Courier New', Courier, monospace; text-align: center; " >X</p>
+</div>
+
+<div id="card003" class="box">
+    <h5>3</h5>
+<p style="font-size:3em; font-family: 'Courier New', Courier, monospace; text-align: center; " >O</p>
+</div>
+
+<div id="card004" class="box">
+  <h5>4</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+</div>
+
+<div id="card005" class="box">
+  <h5>5</h5>
+<p style="font-size:3em; font-family: 'Courier New', Courier, monospace; text-align: center; " >X</p>
+
+</div>
+
+<div id="card006" class="box">
+<h5>6</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+</div>
+       
+<div id="card007" class="box" >
+<h5>7</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+</div>
+
+<div id="card008" class="box" >
+  <h5>8</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+</div>
+
+<div id="card009" class="box" >
+<h5>9</h5>
+  <img src="WhenDovesCryTicTacTo.png" alt="Prince's When Doves Cry Album Cover " width="100%" height="auto">
+<script>
+    
+const NUM_SQUARES = 9;
+for (i=0; i<NUM_SQUARES; i++)
+{
+id = "sq"+i;
+document.write( "<div class='box' id='" + id + "'></div>" );
+}
+            document.getElementById('card002').innerHTML = 'X';
+            document.getElementById('card003').innerHTML = 'X';
+            document.getElementById('card006').innerHTML = 'O';
+        
+</script>
+</div>
+</div>
+<div class="container_001">
+<div class="button">
+<button onclick="alert('Should We Get Started?')">Click Me To Start</button>
+</div>
+<div class="button">
+<button onclick="alert('Please Take Your Turn.')">Click Me</button>
+</div>
+<div class="button">
+          <form action="https://en.wikipedia.org/wiki/Tic-tac-toe" method="get" target="_blank">
+     <button type="submit">Link Info Page</button>
+ </form>
+</div>
 </div>
 </body>
 </html>
