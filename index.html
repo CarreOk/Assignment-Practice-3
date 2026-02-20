@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    console.log("Hello, World!");
+    </script>
+    <link rel="stylesheet" href="practice003.css">
+</head>
+<body>
+    <script>
+        function timesTable(number) {document.write("<h3> Times Table for " + number + "</h3>");
+        for (let i = 1; i <= 12; i++)   {
+            document.write(number + " x " + i + " = " + number * i + "<br>");}
+            //this funtion will print the times table for the number that is passed in as an argument. It will print the times table from 1 to 12.
+
+  let user = prompt("Try out some mathing!!!");
+  if (user != null) {
+            timesTable(user);
+    document.write("<p>Hope you had fun. " + user + "! Whats Next?</p>");
+            document.write("<hr>");}
+} 
+//this code will prompt the user to enter a number and then it will call the timesTable function with the user's input as an argument. It will also print a message to the user after they have entered their input.
+
+
+
+
+        // Function to convert Fahrenheit to Celsius
+  function fahr2cels(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}//this function will take a value in Fahrenheit and convert it to Celsius. It will also update the innerHTML of an element with the id "outputCelcius" to display the result.
+ let far = 32;
+ let cel = (far - 32) / 1.8;
+ let kelv = cel + 273.15;
+ //this code will convert 32°F to Celsius and Kelvin. It will then print the results to the console and also write them to the document.
+
+console.log(far + "°F is " + cel + "°C and " + kelv + "K");
+document.write("<h3>Farenheit to Celcius Conversions</h3>");
+document.write("<p>" + far + "°F is " + cel + "°C and " + kelv + "K</p>");
+document.write(far + "°F is " + fahr2cels(far) + "°C<br>");
+document.write(cel + "°C is " + (cel * 1.8 + 32) + "°F<br>");
+document.write(kelv + "K is " + (kelv - 273.15) + "°C<br>");
+   //this code will print the results of the Fahrenheit to Celsius conversion to the console and also write them to the document. It will also convert 32°F to Celsius and write the result to the document. It will also convert the Celsius value back to Fahrenheit and write the result to the document. Finally, it will convert the Kelvin value back to Celsius and write the result to the document.    
+</script>
+    <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Problem 1: <br> Times Table</h1>     
+<div style=" text-align: center;">
+    <p>Times Table for null </p>
+    <button onclick="timesTable()">try mathing</button>
+
+null x 1= 0
+<br>
+null x 2= 0
+<br>
+null x 3= 0
+<br>
+null x 4= 0
+<br>
+null x 5= 0
+<br>                
+null x 6= 0
+<br>    
+null x 7= 0
+<br>
+null x 8= 0
+<br>
+null x 9= 0
+<br>
+null x 10= 0
+<br>
+null x 11= 0
+<br>
+null x 12= 0
+<br>
+<hr style="border: 5px;border-color: cadetblue;">
+<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Problem 2: <br> Farenheit to Celcius Conversions</h1>     
+<div style=" text-align: center;">
+    <p>32°F is 0°C and 273.15K
+</p>
+
+</div>
+</body>
+</html>
