@@ -1,0 +1,10 @@
+ body {
+  background: 
+  linear-gradient(0deg,rgba(2, 0, 36, 0.76) 0%,
+   rgba(19, 19, 42, 0.78) 35%,
+    rgba(29, 51, 131, 0.88) 100%); }
+ div {
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ font-size: 20px;
+ color: white;}
+    
