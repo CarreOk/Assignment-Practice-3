@@ -25,6 +25,8 @@
         // Function to convert Fahrenheit to Celsius
   function fahr2cels(valNum) {
   valNum = parseFloat(valNum);
+  calc = (valNum-32)/1.8;
+  return calc
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 }
 //this function will take a value in Fahrenheit and convert it to Celsius. It will also update the innerHTML of an element with the id "outputCelcius" to display the result.
